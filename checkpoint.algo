@@ -1,0 +1,28 @@
+Algorithme Checkpoint
+var
+    ch: string;
+    i,nbv,s:integer;
+    Begin
+    i:=0;
+    nbv:=0;
+    s:=1;
+    Write("Give a sentence ends with a point");
+    Read(ch);
+    While (ch[i] Not ".")
+    {
+     i:=i+1;
+     if (ch[i] = " ")
+     {
+        s:=s+1;
+     }
+     End_if
+     if (ch[i] in ["a","e","u","i","o","y","A","E","U","I","O","Y"])
+     {
+        nbv:=nbv+1;
+     }
+     End_if
+    }
+    End_While
+    Write("le nombre de voyelle est ",nbv);
+    Write("le nombre de nom est ",s);
+    End
